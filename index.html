@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calc 2n</title>
+</head>
+<body>
+    <div id="container">
+        <div id="d1">
+            
+                <h1>Calculadora de 2 números</h1>
+
+                <br>
+                <br>
+            
+                <p>1° número</p>
+                <input type="number" id="n1">
+            
+                <br>
+                <br>
+                <p>2° número</p>
+                <input type="number" id="n2">
+            <br>
+            <br>
+                <button onclick="somar()">SOMA</button>
+                <button onclick="subtrair()">SUBTRAÇÃO </button>
+                <button onclick="multilicar()">MULTIPLICAÇÃO</button>
+                <button onclick="dividir()">DIVISÃO</button>
+            <br>
+            <br>
+                Resultado:<span></span>
+            
+        </div>
+    </div>
+    <script>
+        //Variaveis
+        var n1 = document.querySelector(`#n1`)
+        console.log(n1)
+        var n2 = document.querySelector(`#n2`)
+        console.log(n2)
+        var resultado = document.querySelector('span')
+        console.log(resultado)
+        
+        // Funções
+        function somar() {
+            resultado.innerHTML = parseInt(n1.value) + parseInt(n2.value)
+        }
+
+        function subtrair() {
+            resultado.innerHTML = parseInt(n1.value) - parseInt(n2.value)
+        }
+
+        function multilicar() {
+            resultado.innerHTML = parseInt(n1.value) * parseInt(n2.value)
+        }
+
+        function dividir() {
+            resultado.innerHTML = parseInt(n1.value) / parseInt(n2.value)
+        }
+
+    </script>
+</body>
+<footer></footer>
+</html>
